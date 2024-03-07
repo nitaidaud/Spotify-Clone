@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
+.navbar {
+  position: sticky !important;
+  background-color: #242424 !important;
+}
+
+.browse-music .active button {
+  background-color: white;
+}
+
+.browse-music .active button:hover {
+  color: unset;
+}
+
+.fill {
+  height: 100%;
+}
+
+.sidebar{
+  background-color: #242424 !important;
+}
+
+.trending-container {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  scrollbar-arrow-color: transparent;
+  transition: 0.3s;
+}
+
+.trending-container:hover {
+  scrollbar-color: gray transparent;
+}
+
+.search-result{
+  scrollbar-width: thin;
+  scroll-behavior: auto;
+  scrollbar-color: transparent transparent;
+  transition: 0.4s;
+}
+
+.search-result:hover{
+  scrollbar-color: gray transparent;
+}

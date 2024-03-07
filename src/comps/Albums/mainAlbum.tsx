@@ -1,0 +1,7 @@
+export default function MainAlbum() {
+    return (
+        <div className='flex justify-center items-center w-full h-full bg-slate-400 p-5 m-auto rounded-3xl'>
+            MainAlbum
+        </div>
+    )
+}

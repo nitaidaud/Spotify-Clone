@@ -1,4 +1,4 @@
-import { FeaturedPlaylists, SimplifiedPlaylist } from '@spotify/web-api-ts-sdk'
+import { FeaturedPlaylists } from '@spotify/web-api-ts-sdk'
 
 export default function PlaylistItem(props: { featuredPlaylists: FeaturedPlaylists }) {
 

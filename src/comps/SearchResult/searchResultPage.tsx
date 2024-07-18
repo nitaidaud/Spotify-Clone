@@ -4,7 +4,6 @@ import {
   fetchAlbumByIdTest,
   fetchArtistByIdTest,
   fetchTrackByIdTest,
-  spotifyApi,
 } from "../../Utilities/fetcher";
 import { Album, Artist } from "@spotify/web-api-ts-sdk";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

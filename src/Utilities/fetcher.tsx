@@ -21,7 +21,7 @@ export const fetchSearch = async (endpoint: string) => {
 
 const fetchData = async (endpoint: string) => {
     while (endpoint != "") {
-
+        
         const token = await fetchToken()
 
         const searchParameters = {

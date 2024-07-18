@@ -50,3 +50,9 @@
 .search-result:hover{
   scrollbar-color: gray transparent;
 }
+
+.carousel .control-arrow {
+  height: fit-content;
+  top: 40% !important;
+  background-color: transparent !important;
+}

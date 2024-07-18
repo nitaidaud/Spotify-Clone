@@ -9,7 +9,7 @@ interface TrackContextValue {
 
 export const TrackContext = createContext<TrackContextValue>({
   track: null,
-  setTrack: () => {},
+  setTrack: () => {}
 });
 
 export const TrackProvider: React.FC<PropsWithChildren> = ({ children }) => {

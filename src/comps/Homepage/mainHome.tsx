@@ -1,13 +1,27 @@
+import { spotifyApi } from '../../Utilities/fetcher';
+import FeaturedPlaylist from './featuredPlaylists';
+import TopCategories from './topCategories';
+import TopGenres from './topCategories';
 import TrendingNow from './trendingNow'
+
+console.log("test playlist", await spotifyApi.browse.getFeaturedPlaylists('IL', 'en', undefined, 10));
+
 
 export default function MainHome() {
   return (
-    <div className='relative grid justify-between w-full h-full p-5 m-auto rounded-3xl'>
-      <div className='w-full h-fit backdrop-blur-xl font-bold text-3xl'>
-        <h2 className='text-start w-full p-3 '>Trending Right Now</h2>
-      </div>
-      <div className='w-fit max-w-96 trending-container overflow-y-auto'>
+
+    <div className='grid lg:grid-cols-2 lg:grid-rows-1 lg:h-full h-screen'>
+      <div className='overflow-auto'>
         <TrendingNow />
+      </div>
+      <div className='w-full h-full grid'>
+        <div>
+          <FeaturedPlaylist />
+        </div>
+
+        <div>
+          <TopCategories/>
+        </div>
       </div>
     </div>
   )

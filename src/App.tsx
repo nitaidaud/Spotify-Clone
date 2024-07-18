@@ -9,19 +9,19 @@ import { VolumeProvider } from "./Utilities/VolumeContext";
 
 const App: React.FC = () => {
 
-  return (
-    <div className='h-full w-full flex flex-col select-none'>
-      <TrackProvider>
-        <Router>
-          <Navbar />
-          <Dashboard />
-          <VolumeProvider>
-            <BottomPlayer />
-          </VolumeProvider>
-        </Router>
-      </TrackProvider>
-    </div>
-  )
+return (
+  <div className='h-full w-full flex flex-col select-none'>
+    <TrackProvider>
+      <Router>
+        <Navbar />
+        <Dashboard />
+        <VolumeProvider>
+          <BottomPlayer />
+        </VolumeProvider>
+      </Router>
+    </TrackProvider>
+  </div>
+)
 }
 
 export default App

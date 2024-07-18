@@ -21,27 +21,45 @@ export default function BottomPlayer() {
 
     const { volume, setVolume } = useContext(VolumeContext)
 
-    let intervalId: NodeJS.Timeout
+    // let timeoutId: NodeJS.Timeout
 
-    const durationChange = () => {
-        if (durationRef.current && track) {
-            if (durationRef.current.valueAsNumber >= track?.duration_ms) {
-                clearInterval(intervalId)
-                setIsPlaying(false)
-            }
-            durationRef.current.valueAsNumber += 1
-        }
-    }
+    // const durationChange = () => {
+    //     if (durationRef.current && track) {
+    //         if (durationRef.current.valueAsNumber >= track?.duration_ms) {
+    //             // clearInterval(timeoutId)
+    //             setIsPlaying(false)
+    //         }
+    //         durationRef.current.valueAsNumber += 1
+    //     }
+    // }
 
-    if (track?.preview_url && isPlaying) {
-        intervalId = setInterval(durationChange, 1)
-    }
+    // if (track?.preview_url && isPlaying) {
+    //     setTimeout(durationChange, 3000);
+    // }
 
     useEffect(() => {
         if (audioRef.current) {
             audioRef.current.volume = volume
         }
-    }, [volume])
+
+        if (audioRef.current && durationRef.current) {
+            if (audioRef.current.ended) {
+                setIsPlaying(false)
+                setDuration(0)
+            }
+
+            else if (isPlaying) {
+                setTimeout(() => { }, 1000)
+                setDuration(duration + 0.28)
+                durationRef.current.valueAsNumber += audioRef.current.currentTime
+            }
+
+            else if (!isPlaying) {
+                setDuration(audioRef.current.currentTime)
+                durationRef.current.valueAsNumber = audioRef.current.currentTime
+            }
+        }
+    }, [duration, isPlaying, volume])
 
     return (
         <div className='fixed lg:bottom-0 bottom-10 self-center w-full h-16 bg-transparent bg-opacity-50 backdrop-blur-xl flex gap-x-16'>
@@ -50,9 +68,10 @@ export default function BottomPlayer() {
             </div>
             <div className='flex flex-col justify-center items-center gap-x-16 m-auto w-full'>
                 <div className='flex justify-center items-center gap-x-16 m-auto'>
-                    {track && track.preview_url && <audio src={track.preview_url} ref={audioRef}
-                        loop={loop}
-                    />}
+                    {track && track.preview_url &&
+                        <audio src={track.preview_url} ref={audioRef}
+                            loop={loop}
+                        />}
                     {/* TODO: put icons in it own comp */}
                     <FontAwesomeIcon className='hover:opacity-60 duration-200' icon={faShuffle} />
 
@@ -61,9 +80,9 @@ export default function BottomPlayer() {
                     <FontAwesomeIcon className='hover:opacity-60 duration-200' icon={isPlaying ? faPause : faPlay} onClick={() => {
                         {
                             {
-                                audioRef.current &&
+                                // audioRef.current &&
 
-                                    setDuration(audioRef.current.duration * 500)
+                                //     setDuration(audioRef.current.duration * 500)
 
                                 {
                                     audioRef.current && setVolume(audioRef.current.volume)
@@ -76,8 +95,7 @@ export default function BottomPlayer() {
 
 
                                 {
-                                    isPlaying && audioRef.current?.pause() &&
-                                        clearInterval(intervalId)
+                                    isPlaying && audioRef.current?.pause()
                                 }
 
                                 if (isPlaying && audioRef.current) {
@@ -100,9 +118,13 @@ export default function BottomPlayer() {
                 <div className='w-2/3'>
                     <input type="range"
                         ref={durationRef}
-                        defaultValue={0}
-                        max={duration}
-                        className='play-timer w-2/3 h-0.5 bg-gray-200 rounded-lg  cursor-pointer' /> 0:{(duration / 500).toFixed()}
+                        // defaultValue={0}
+                        value={duration}
+                        max={audioRef.current ? audioRef.current.duration * 500 : 0}
+                        className='play-timer w-2/3 h-0.5 bg-gray-200 rounded-lg  cursor-pointer' />
+
+                    0:{(duration / 500).toFixed()}
+
                 </div>
             </div>
             <div className={`absolute flex items-center justify-start right-6 self-center w-1/5 ${track?.preview_url ? "enabled:" : "disabled:"}`}>

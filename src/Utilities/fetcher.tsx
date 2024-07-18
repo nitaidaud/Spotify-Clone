@@ -1,10 +1,9 @@
 import { SpotifyApi } from '@spotify/web-api-ts-sdk'
-//sdk token = BQAALiXTw8xCgfn8YTNoTs7PSUQmCx0779CtVFbtrVSVpXlpDBddoHty2cXQYtBOSYT6lk6ks3pf0pH8r6htSOklVoXAkM0ehGJaBfkW-k5gf_xLcD-lXYsi3OoSytHjH_E0Dm-i9i5iVNyv52ocB8EMIPJsg_tyCYuuhUNJvAKDxEo8OuCSPj4qzHLY20jH8CDN_Tr3OQ5ZLblp2biisyI5
 
 const base = "https://api.spotify.com/v1/";
 
-const client_id: string = '67c9464e9a1e467d971a5f2875d0a7a1';
-const client_secret: string = 'eda396c9f31c46f487841fcd8e41550e';
+const client_id:string = import.meta.env.CLIENTID
+const client_secret:string = import.meta.env.CLIENTSECRET
 
 export const spotifyApi = SpotifyApi.withClientCredentials(
     client_id,
@@ -142,7 +141,6 @@ export const fetchArtistByIdTest = async (id: string) => {
     }
 }
 
-
 export const fetchAlbumById = async (id: string) => {
     while (id != "") {
 
@@ -197,7 +195,6 @@ export const fetchNewReleasesTest = async () => {
     return data;
 }
 
-
 export async function fetchToken() {
 
 
@@ -217,5 +214,3 @@ export async function fetchToken() {
             return data.access_token;
         })
 }
-
-

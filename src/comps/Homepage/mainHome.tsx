@@ -1,10 +1,6 @@
-import { spotifyApi } from '../../Utilities/fetcher';
 import FeaturedPlaylist from './featuredPlaylists';
 import TopCategories from './topCategories';
 import TrendingNow from './trendingNow'
-
-console.log("test playlist", await spotifyApi.browse.getFeaturedPlaylists('IL', 'en', undefined, 10));
-
 
 export default function MainHome() {
   return (

@@ -46,7 +46,7 @@ export default function TopCategories() {
                     stopOnHover
                     useKeyboardArrows
                     autoPlay
-                    className="max-w-4xl"
+                    className="max-w-72"
                 >
 
                     {categories.categories.items.map((category) => {

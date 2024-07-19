@@ -53,7 +53,7 @@ export default function FeaturedPlaylist() {
             stopOnHover
             useKeyboardArrows
             autoPlay
-            className="max-w-4xl"
+            className="max-w-72"
           >
             {playlist.playlists.items.map((playlist) => {
               const { images, id } = playlist;

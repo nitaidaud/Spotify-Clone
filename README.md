@@ -36,6 +36,10 @@ This project is a clone of the Spotify app, designed to stream music and provide
 - 🎨 Tailwind CSS
 - 💅 CSS
 
+### Preview
+
+<img src="https://i.ibb.co/NYbXWd7/Spotify-Preview.gif" alt="">
+
 ---
 
 ## 🚀 Getting Started

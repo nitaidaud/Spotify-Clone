@@ -130,4 +130,5 @@ Don't forget to give the project a star! Thanks again!
 
 ## 📧 Contact
 Email - nitaidaud@gmail.com
+
 Project Link: https://github.com/nitaidaud/Spotify-Clone

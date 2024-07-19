@@ -2,8 +2,8 @@ import { SpotifyApi } from '@spotify/web-api-ts-sdk'
 
 const base = "https://api.spotify.com/v1/";
 
-const client_id:string = import.meta.env.CLIENTID
-const client_secret:string = import.meta.env.CLIENTSECRET
+const client_id = import.meta.env.VITE_CLIENTID
+const client_secret = import.meta.env.VITE_CLIENTSECRET
 
 export const spotifyApi = SpotifyApi.withClientCredentials(
     client_id,

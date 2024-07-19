@@ -1,23 +1,22 @@
-import FeaturedPlaylist from './featuredPlaylists';
-import TopCategories from './topCategories';
-import TrendingNow from './trendingNow'
+import FeaturedPlaylist from "./featuredPlaylists";
+import TopCategories from "./topCategories";
+import TrendingNow from "./trendingNow";
 
 export default function MainHome() {
   return (
-
-    <div className='grid lg:grid-cols-2 lg:grid-rows-1 lg:h-full h-screen'>
-      <div className='overflow-auto'>
+    <div className="grid lg:grid-cols-2 lg:grid-rows-1 lg:h-full h-screen">
+      <div className="overflow-auto">
         <TrendingNow />
       </div>
-      <div className='w-full h-full grid'>
+      <div className="w-full h-full grid">
         <div>
           <FeaturedPlaylist />
         </div>
 
         <div>
-          <TopCategories/>
+          <TopCategories />
         </div>
       </div>
     </div>
-  )
+  );
 }

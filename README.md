@@ -53,7 +53,7 @@ To get a local copy up and running follow these simple steps.
 npm install npm@latest -g
 ```
 
-## 📥 Installation
+### 📥 Installation
 1. Clone the repository:
 
 ```
@@ -70,7 +70,7 @@ cd Spotify-Clone
 npm install
 ```
 
-## ⚙️ Configuration
+### ⚙️ Configuration
 To use the Spotify API, you need to set up your credentials:
 
 - Go to the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)

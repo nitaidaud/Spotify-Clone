@@ -48,7 +48,7 @@ To get a local copy up and running follow these simple steps.
 
 ### 📋 Prerequisites
 
-- Intall dependencies
+- Intall latest npm
 ```
 npm install npm@latest -g
 ```

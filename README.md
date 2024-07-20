@@ -50,7 +50,7 @@ To get a local copy up and running follow these simple steps.
 
 - Intall dependencies
 ```
-npm install
+npm install npm@latest -g
 ```
 ## 📥 Installation
 1. Clone the repository:

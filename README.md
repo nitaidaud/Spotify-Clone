@@ -52,6 +52,7 @@ To get a local copy up and running follow these simple steps.
 ```
 npm install npm@latest -g
 ```
+
 ## 📥 Installation
 1. Clone the repository:
 
@@ -67,6 +68,18 @@ cd Spotify-Clone
 3. Install dependencies:
 ```
 npm install
+```
+
+## ⚙️ Configuration
+To use the Spotify API, you need to set up your credentials:
+
+- Go to the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)
+- Create a new app to get your ```client_id``` and ```client_secret```
+- Create a ```.env``` file in the root of your project
+- Add your credentials to the ```.env``` file:
+```
+VITE_CLIENTID=your_client_id_here
+VITE_CLIENTSECRET=your_client_secret_here
 ```
 
 <hr>
@@ -89,20 +102,6 @@ npm run preview
 - Use the search bar to find songs, artists, or albums. 
 
 - To play a song, make sure to select "song" in the search options.
-
-<hr>
-
-## ⚙️ Configuration
-To use the Spotify API, you need to set up your credentials:
-
-- Go to the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)
-- Create a new app to get your ```client_id``` and ```client_secret```
-- Create a ```.env``` file in the root of your project
-- Add your credentials to the ```.env``` file:
-```
-VITE_CLIENTID=your_client_id_here
-VITE_CLIENTSECRET=your_client_secret_here
-```
 
 <hr>
 

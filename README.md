@@ -12,6 +12,10 @@
   A clone of the Spotify app to stream music and provide a similar user experience.
   <br />
   <a href="https://spotify-clone-ten-gules.vercel.app/">View Demo</a>
+  •
+  <a href="https://github.com/nitaidaud/Spotify-Clone/issues/new?labels=bug&amp;template=bug_report.md">Report bug</a>
+  •
+  <a href="https://github.com/nitaidaud/Spotify-Clone/issues/new?labels=enhancement&amp;&template=feature_request.md">Request Feature</a>
 </p>
 
 ---

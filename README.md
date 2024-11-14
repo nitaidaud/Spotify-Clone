@@ -11,7 +11,7 @@
 <p align="left">
   A clone of the Spotify app to stream music and provide a similar user experience.
   <br />
-  <a href="https://spotify-clone-ten-gules.vercel.app/">View Demo</a>
+  <a href="https://nitai-spotify-clone.vercel.app/">View Demo</a>
   •
   <a href="https://github.com/nitaidaud/Spotify-Clone/issues/new?labels=bug&amp;template=bug_report.md">Report bug</a>
   •
